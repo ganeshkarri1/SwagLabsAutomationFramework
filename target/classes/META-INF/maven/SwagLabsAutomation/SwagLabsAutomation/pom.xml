@@ -39,6 +39,12 @@
     <version>7.32.0</version>
     <scope>compile</scope>
 </dependency>
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.7.0</version>
+</dependency>
+
 <!-- Source: https://mvnrepository.com/artifact/io.github.selcukes/selcukes-extent-reports -->
 <dependency>
     <groupId>io.github.selcukes</groupId>
