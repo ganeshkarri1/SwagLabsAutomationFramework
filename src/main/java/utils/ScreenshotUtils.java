@@ -46,3 +46,4 @@ public class ScreenshotUtils {
         return "../screenshots/" + fileName;
     }
 }
+

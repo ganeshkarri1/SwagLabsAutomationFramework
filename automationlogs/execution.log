@@ -844,3 +844,55 @@
 2026-01-28 16:21:41.241 [main] INFO  LaunchPage - Step: User is verifying application launch
 2026-01-28 16:21:41.274 [main] INFO  LaunchPage - Actual Title: Swag Labs
 2026-01-28 16:21:41.274 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:16.058 [main] WARN  TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Users\ganes\eclipse-workspace\SwagLabsAutomation\src\test\java\testng.xml] otherwise TestNG may fail or not work as expected.
+2026-01-28 16:29:16.330 [main] INFO  Utils - [TestNG] Running:
+  C:\Users\ganes\eclipse-workspace\SwagLabsAutomation\src\test\java\testng.xml
+
+2026-01-28 16:29:17.075 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:17.098 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:29:19.316 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:29:19.319 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:29:19.440 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:29:19.452 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:21.260 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:21.266 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:29:22.642 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:29:22.642 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:29:22.675 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:29:22.677 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:26.182 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:26.208 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:29:30.283 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:29:30.283 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:29:30.486 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:29:30.487 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:32.354 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:32.377 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:29:35.776 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:29:35.776 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:29:35.815 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:29:35.815 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:43.011 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:43.029 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:29:46.415 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:29:46.415 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:29:46.767 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:29:46.767 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:50.532 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:50.560 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:29:55.578 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:29:55.578 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:29:55.891 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:29:55.891 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:29:59.192 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:29:59.213 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:30:04.209 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:30:04.209 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:30:04.313 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:30:04.313 [main] INFO  LaunchPage - driver is closing
+2026-01-28 16:30:07.696 [main] INFO  WebDriverManager - Using chromedriver 140.0.7339.207 (resolved driver for Chrome 140)
+2026-01-28 16:30:07.715 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\ganes\.cache\selenium\chromedriver\win64\140.0.7339.207\chromedriver.exe
+2026-01-28 16:30:13.006 [main] INFO  LaunchPage - driver is initializing
+2026-01-28 16:30:13.006 [main] INFO  LaunchPage - Step: User is verifying application launch
+2026-01-28 16:30:13.080 [main] INFO  LaunchPage - Actual Title: Swag Labs
+2026-01-28 16:30:13.082 [main] INFO  LaunchPage - driver is closing
