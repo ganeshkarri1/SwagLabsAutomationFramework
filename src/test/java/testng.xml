@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <suite name="Cucumber Suite">
     <test name="Cucumber Tests">
-
         <parameter name="cucumber.filter.tags" value="@Login"/>
-
         <classes>
             <class name="runners.TestRunner"/>
         </classes>
-
     </test>
 </suite>
