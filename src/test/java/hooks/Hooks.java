@@ -4,8 +4,6 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 
 import Base.DriverFactory;
 import config.Config;
@@ -30,28 +28,16 @@ public class Hooks {
 
 	@After
 	public void tearDown(io.cucumber.java.Scenario scenario) {
-		try {
-            if (scenario.isFailed()) {
-                logger.error("Scenario failed: " + scenario.getName());
 
-                byte[] screenshot =
-                        ((TakesScreenshot) DriverFactory.getDriver())
-                                .getScreenshotAs(OutputType.BYTES);
-
-                scenario.attach(
-                        screenshot,
-                        "image/png",
-                        "Failure Screenshot"
-                );
-            }
-        } catch (Exception e) {
-            logger.error("Screenshot capture failed", e);
-        } finally {
-            DriverFactory.tearDriver();
-            logger.info("Browser closed");
-        }
-    }
-}  
-	
-
+	    if (scenario.isFailed()) {
+	        String path = ScreenshotUtils.captureScreenshot(
+	                DriverFactory.getDriver(),
+	                scenario.getName().replaceAll(" ", "_")
+	        );
+	        ExtentManager.screenshotPath.set(path);
+	        
+	    }
+	DriverFactory.tearDriver();    
+	}
+}
 

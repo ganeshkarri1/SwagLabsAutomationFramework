@@ -27,5 +27,7 @@ jobs:
           key: maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: maven-
 
-      - name: Run Selenium Tests
+      - name: Run Selenium Tests (Headless)
         run: mvn clean test
+        env:
+          headless: true

@@ -47,11 +47,18 @@
 
 <!-- Source: https://mvnrepository.com/artifact/io.github.selcukes/selcukes-extent-reports -->
 <dependency>
-    <groupId>io.github.selcukes</groupId>
-    <artifactId>selcukes-extent-reports</artifactId>
-    <version>2.3.14</version>
-    <scope>compile</scope>
+  <groupId>com.aventstack</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>5.1.1</version>
 </dependency>
+
+<dependency>
+  <groupId>io.cucumber</groupId>
+  <artifactId>cucumber-testng</artifactId>
+  <version>7.32.0</version>
+  <scope>test</scope>
+</dependency>
+
 <!-- Source: https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 <dependency>
     <groupId>org.apache.logging.log4j</groupId>
