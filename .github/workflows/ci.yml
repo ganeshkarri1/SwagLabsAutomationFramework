@@ -7,11 +7,16 @@ on:
     branches: [ main ]
 
   schedule:
-    - cron: '0 1 * * *'   # Nightly regression (1 AM UTC)
+    - cron: '0 1 * * *'   # Nightly Regression
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chrome, edge]
 
     steps:
       - name: Checkout source code
@@ -30,17 +35,17 @@ jobs:
           key: maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: maven-
 
-      # Smoke suite on push / PR
+      # Smoke on push / PR
       - name: Run Smoke Suite
         if: github.event_name != 'schedule'
-        run: mvn clean test -Dtest=SmokeRunner
+        run: mvn clean test -Dbrowser=${{ matrix.browser }} -Dtest=SmokeRunner
         env:
           headless: true
 
-      # Regression suite at night
-      - name: Run Regression Suite (Nightly)
+      # Nightly regression
+      - name: Run Regression Suite
         if: github.event_name == 'schedule'
-        run: mvn clean test -Dtest=RegressionRunner
+        run: mvn clean test -Dbrowser=${{ matrix.browser }} -Dtest=RegressionRunner
         env:
           headless: true
 
@@ -48,5 +53,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Extent-Report
+          name: Extent-Report-${{ matrix.browser }}
           path: reports/

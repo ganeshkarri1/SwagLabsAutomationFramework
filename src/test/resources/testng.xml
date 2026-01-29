@@ -1,4 +1,4 @@
-<suite name="Automation Suite">
+<suite name="Automation Suite" parallel="tests" thread-count=2>
     <test name="Smoke Tests">
         <classes>
             <class name="runners.SmokeRunner"/>
