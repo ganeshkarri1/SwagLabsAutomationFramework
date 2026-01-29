@@ -16,40 +16,45 @@ public class DriverFactory {
     private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
     public static void init(String browser) {
-
-        WebDriver driver;
+    	
+    WebDriver driver = null;
 
         if (browser.equalsIgnoreCase("chrome")) {
 
-        	 WebDriverManager.chromedriver().setup();
+            WebDriverManager.chromedriver()
+                    .avoidBrowserDetection()
+                    .browserVersion("140")
+                    .setup();
 
-        	    ChromeOptions options = new ChromeOptions();
+            ChromeOptions options = new ChromeOptions();
 
-        	    // REQUIRED for CI (Linux)
-        	    options.addArguments("--headless=new");
-        	    options.addArguments("--no-sandbox");
-        	    options.addArguments("--disable-dev-shm-usage");
-        	    options.addArguments("--disable-gpu");
-        	    options.addArguments("--window-size=1920,1080");
-
-        	    driver = new ChromeDriver(options);
-        } else if (browser.equalsIgnoreCase("edge")) {
+            if (Config.getProperty("headless").equalsIgnoreCase("true")) {
+                options.addArguments(
+                    "--headless=new",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--disable-gpu",
+                    "--window-size=1920,1080"
+                );
+            }
+        }
+        else if (browser.equalsIgnoreCase("edge")) {
 
             WebDriverManager.edgedriver().setup();
-            EdgeOptions options = new EdgeOptions();
+            EdgeOptions options1 = new EdgeOptions();
             if(Config.getProperty("headless").equalsIgnoreCase("true")) {
-            	options.addArguments("--headless=new");
+            	options1.addArguments("--headless=new");
             }
-            driver = new EdgeDriver(options);
+            driver = new EdgeDriver(options1);
 
         } else if (browser.equalsIgnoreCase("firefox")) {
 
             WebDriverManager.firefoxdriver().setup();
-            FirefoxOptions options = new FirefoxOptions();
+            FirefoxOptions options1 = new FirefoxOptions();
             if(Config.getProperty("headless").equalsIgnoreCase("true")) {
-            	options.addArguments("--headless");
+            	options1.addArguments("--headless");
             }
-            driver = new FirefoxDriver(options);
+            driver = new FirefoxDriver(options1);
 
         } else {
             throw new RuntimeException("Unsupported browser: " + browser);
