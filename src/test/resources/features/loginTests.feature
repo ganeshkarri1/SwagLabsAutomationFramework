@@ -1,8 +1,9 @@
-@Login
+@Regression
 Feature: Swag Labs Login Test
 Background:
     Given user launches the application
     Then page title should contain "Swag Labs"
+@Smoke
 Scenario: Give Credentials and verify sucessful Login
   Given user gives the username as "<username>" and password as "<password>" 
   Then the products page should appear

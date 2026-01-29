@@ -27,7 +27,14 @@ jobs:
           key: maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: maven-
 
-      - name: Run Selenium Tests (Headless)
-        run: mvn clean test
+      - name: Run Smoke Suite
+        run: mvn clean test -Dtest=SmokeRunner
         env:
           headless: true
+
+      - name: Upload Extent Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Extent-Report
+          path: reports/

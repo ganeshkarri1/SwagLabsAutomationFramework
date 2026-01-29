@@ -1,8 +1,13 @@
-<suite name="Cucumber Suite">
-    <test name="Cucumber Tests">
-        <parameter name="cucumber.filter.tags" value="@Login"/>
+<suite name="Automation Suite">
+    <test name="Smoke Tests">
         <classes>
-            <class name="runners.TestRunner"/>
+            <class name="runners.SmokeRunner"/>
+        </classes>
+    </test>
+
+    <test name="Regression Tests">
+        <classes>
+            <class name="runners.RegressionRunner"/>
         </classes>
     </test>
 </suite>
